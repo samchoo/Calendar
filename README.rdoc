@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 My new edit
 First application project
 =======
