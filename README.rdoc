@@ -1,1 +1,3 @@
 First application project
+
+Create a calendar using RoR
