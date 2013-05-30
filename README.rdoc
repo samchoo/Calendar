@@ -1,7 +1,0 @@
-My new edit
-First application project
-=======
-First application project
-
-Create a calendar using RoR
->>>>>>> 285b16cf95846f9a0ee54a7bf5a2e26059cec18f

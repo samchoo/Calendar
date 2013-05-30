@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails', '2.0.2'
+gem 'devise'
 gem 'event-calendar', :require => 'event_calendar'
 
 group :development, :test do
