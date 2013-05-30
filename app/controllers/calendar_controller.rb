@@ -6,6 +6,7 @@
  @event_strips = Event.event_strips_for_month(@shown_month)
 
 
+ end
 =begin
    x = Event.new
  x = Event.new
@@ -17,8 +18,13 @@
 
 
 
-
+   
+ def events
+   @event = Event.find(params[:id])
  end
+
+
+
  end
  
  def test
