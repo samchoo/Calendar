@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails', '2.0.2'
+<<<<<<< HEAD
 gem 'devise'
+=======
+gem 'event-calendar', :require => 'event_calendar'
+>>>>>>> a01730057d5f64d35574514ae7736cba4382240f
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
