@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails', '2.0.2'
 gem 'devise'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'bootstrap-sass', '2.3.1.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
