@@ -1,5 +1,13 @@
-<h2>Sign in</h2>
+<% if user_signed_in? %>
+<script type="text/javascript">
+window.location = "../calendar"
+</script>
+	
+<% else %>
 
+	<body>
+	  
+	<h2>Sign in</h2>
 <%= form_for("user", :url => user_session_path) do |f| %>
   <p><%= f.label :email %></p>
   <p><%= f.text_field :email %></p>
@@ -12,4 +20,8 @@
   <% end -%>
 
   <p><%= f.submit "Sign in" %></p>
+
+
+</body>
+<%end%>
 <% end -%>

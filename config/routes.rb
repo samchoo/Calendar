@@ -2,7 +2,7 @@ Calendar::Application.routes.draw do
   devise_for :users
   root to: 'static_pages#home'
   match '/events/(/:id)' => 'calendar#events'
-
+  get "calendar/index"
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   # The priority is based upon order of creation:
   # first created -> highest priority.
