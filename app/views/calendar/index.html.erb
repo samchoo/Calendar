@@ -1,4 +1,10 @@
+<% if !user_signed_in? %>
+<script type="text/javascript">
+window.location = "../static_pages/home"
+</script>
+<% else %>
 <%= stylesheet_link_tag "event_calendar" %>
 <%= javascript_include_tag "event_calendar" %>
 
 <%= raw(event_calendar) %>
+<%end%>
