@@ -7,7 +7,11 @@
  end
    
    def events
-     @event = Event.find(params[:id])
+     @event = Event.all
    end   
+   
+   def add_event
+    
+   end
  end
 
