@@ -6,6 +6,8 @@ Calendar::Application.routes.draw do
   get "calendar/index"
   get "static_pages/home"
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  
+  get "calendar/add_event"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

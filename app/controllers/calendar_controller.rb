@@ -22,7 +22,7 @@
  end
    
    def events
-     @event = Event.find(params[:id])
+     @event = Event.all
    end   
    
    def posts
@@ -33,5 +33,8 @@
      @event = Event.new
    end
    
+   def add_event
+    
+   end
  end
 
