@@ -1,5 +1,7 @@
 Calendar::Application.routes.draw do
   devise_for :users
+  resources :events
+  get "event/new"
   root to: 'static_pages#home'
   match '/events/(/:id)' => 'calendar#events'
   match '/add_event' => 'calendar#add_event'

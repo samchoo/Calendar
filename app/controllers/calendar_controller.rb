@@ -24,17 +24,20 @@
    def events
      @event = Event.all
    end   
-   
-   def posts
-     @event = Event.new
-   end
-   
-   def create
-     @event = Event.new
-   end
-   
-   def add_event
-    
-   end
+
  end
 
+
+=begin
+  def new
+    @event = Event.new
+  end
+  def index
+    @event = Event.all
+  end
+  def create
+    @event = Event.new(params[:event])
+    @event.save
+    redirect_to root_path
+  end  
+=end

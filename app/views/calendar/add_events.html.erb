@@ -1,0 +1,17 @@
+<h1>Add an Event</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@event) do |f| %>
+<%= form_tag(:controller => "posts", :action => "create") do %> 
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= label_tag :name %>
+<%= text_field_tag :name %>
+
+<form action="/../events"><input type="submit"></form>
