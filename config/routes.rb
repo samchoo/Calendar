@@ -2,6 +2,7 @@ Calendar::Application.routes.draw do
   devise_for :users
   root to: 'static_pages#home'
   match '/events/(/:id)' => 'calendar#events'
+  match '/add_event' => 'calendar#add_event'
   get "calendar/index"
   get "static_pages/home"
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}

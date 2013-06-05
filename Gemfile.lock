@@ -60,7 +60,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.8.1-x86-mingw32)
-    hike (1.2.2)
+    hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.0.2)
@@ -155,7 +155,6 @@ DEPENDENCIES
   devise
   event-calendar
   jquery-rails (= 2.0.2)
-  mail
   rails (= 3.2.13)
   rspec-rails (= 2.11.0)
   sass-rails (= 3.2.5)

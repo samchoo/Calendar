@@ -24,5 +24,14 @@
    def events
      @event = Event.find(params[:id])
    end   
+   
+   def posts
+     @event = Event.new
+   end
+   
+   def create
+     @event = Event.new
+   end
+   
  end
 
