@@ -22,6 +22,20 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
   end
+  
+  def show
+    #@event = Event.find(params[:id])
+    @event = Event.find(params[:id])
+    
+    if @event.email == current_user.email
+    else
+      @event = Event.new
+      @event.name = "You suck.  You cheater."
+      end
+    
+    
+    
+  end
 
 
 end
