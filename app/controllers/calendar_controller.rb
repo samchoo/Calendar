@@ -1,4 +1,17 @@
  class CalendarController < ApplicationController
+   
+   before_filter :signed_in_user
+   
+   def signed_in_user
+     unless signed_in?
+       store_location
+       redirect_to root_path
+     end
+   end
+   def store_location
+     session[:return_to] = request.url
+   end
+   
  def index
  
  

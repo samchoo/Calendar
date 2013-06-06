@@ -1,6 +1,16 @@
 class EventsController < ApplicationController
   
-  
+     before_filter :signed_in_user
+   
+   def signed_in_user
+     unless signed_in?
+       store_location
+       redirect_to root_path
+     end
+   end
+   def store_location
+     session[:return_to] = request.url
+   end
 
   def new
     @event = Event.new
@@ -10,6 +20,7 @@ class EventsController < ApplicationController
   end
   def create
     @event = Event.new(params[:event])
+    @event.email = current_user.email
     @event.save
     redirect_to root_path
   end

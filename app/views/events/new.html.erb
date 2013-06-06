@@ -1,12 +1,83 @@
 <h1>Add an Event</h1>
 
 <div class="row">
-  <div class="span6 offset3">
     <%= form_for(@event) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      	
+      	
+      	<div align="center">
+      	
+  <div class="field">
+    <%= f.label :name_of_event %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_at %><br />
+    <%= f.date_select :start_at, :start_year => 1950, :order => [:month, :day, :year], :end_year => 2100%>
+  </div>
+<div class="field">
+    <%= f.label :end_at %><br />
+    <%= f.date_select :start_at, :start_year => 1950, :order => [:month, :day, :year], :end_year => 2100%>
+  </div>
+  
+  <table cellpadding="15">
+<tr>
+	<td>
+<div class="field">
+    <%= f.label(:m) %>
+    <%= f.check_box(:monday)%>
+  </div>
+  </td>
+  <td>
+<div class="field">
+    <%= f.label(:t) %>
+    <%= f.check_box(:tuesday)%>
+  </div>
+  </td>
+  <td>
+  <div class="field">
+    <%= f.label(:w) %>
+    <%= f.check_box(:wednesday)%>
+  </div>
+  </td>
+  <td>
+  <div class="field">
+    <%= f.label(:th) %>
+    <%= f.check_box(:thursday)%>
+  </div>
+  </td>
+  <td>
+  <div class="field">
+    <%= f.label(:f) %>
+    <%= f.check_box(:friday)%>
+  </div>
+  </td>
+  <td>
+  <div class="field">
+    <%= f.label(:sa) %>
+    <%= f.check_box(:saturday)%>
+  </div>
+  </td>
+  <td>
+  <div class="field">
+    <%= f.label(:s) %>
+    <%= f.check_box(:sunday)%>
+  </div>
+  </td>
+</tr>
+</table>
+
+<div class="field">
+    <%= f.label :end_at %><br />
+    <%= f.date_select :start_at, :start_year => 1950, :order => [:month, :day, :year], :end_year => 2100%>
+  </div>
 
       <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
     <% end %>
-  </div>
+    <button class="btn btn-large btn-danger" onclick="window.location='../calendar/index'">Cancel</button>
+
+
+</div>
+<!--
+<%= button_to 'Cancel', root_path, :class => 'btn btn-large btn-danger' %>
+-->
 </div>
